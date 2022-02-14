@@ -1,0 +1,33 @@
+<section id="partners">
+  <div class="py-5 text-center">
+    <div class="container">
+      <h3 *ngIf="true">Below are our Corporate Partners</h3>
+      <table class="table table-striped table-bordered align-middle">
+        <thead>
+          <tr>
+            <th scope="col">Company</th>
+            <th scope="col">Trademark</th>
+            <th scope="col">Sponsorship</th>
+            <th scope="col">Go to Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of partners">
+            <td>
+              {{i.company}}
+            </td>
+            <td>
+              <img [class]="imgPartners" [src]="i.trademark"/>
+            </td>
+            <td>
+              {{i.sponsorship}}
+            </td>
+            <td>
+              <a [href]="i.website">View Website</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
